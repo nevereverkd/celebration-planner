@@ -3,10 +3,6 @@
     "rules": "firestore.rules"
   },
   "auth": {
-    "authorizedDomains": [
-      "localhost",
-      "celebration-planner.sachinverma240644.workers.dev"
-    ],
     "providers": {
       "emailPassword": true,
       "googleSignIn": {

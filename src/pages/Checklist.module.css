@@ -1,0 +1,112 @@
+/* Checklist.module.css */
+.page { max-width: 900px; margin: 0 auto; animation: fadeIn 0.4s ease; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.progressCard {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border: 1px solid rgba(139,92,246,0.1);
+}
+
+.filterRow {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filterTab {
+  padding: 0.45rem 0.875rem;
+  border-radius: 100px;
+  border: 1.5px solid #e2e8f0;
+  background: white;
+  color: #64748b;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.filterTab:hover { border-color: #c084fc; color: #7e22ce; }
+.filterTabActive {
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  border-color: transparent;
+  color: white;
+  box-shadow: 0 3px 10px rgba(139,92,246,0.3);
+}
+
+.listWrap { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.section { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.sectionLabel {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.checkItem {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 0.875rem 1rem;
+  background: white;
+  border-radius: 14px;
+  border: 1.5px solid rgba(139,92,246,0.08);
+  transition: all 0.2s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.checkItem:hover { border-color: rgba(139,92,246,0.2); box-shadow: 0 4px 16px rgba(139,92,246,0.08); }
+.checkItem:hover button:last-child { opacity: 1 !important; }
+.checkItemDone { background: #f8fafc; opacity: 0.7; }
+
+.checkBox {
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  border: 2px solid #e2e8f0;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  color: white;
+}
+.checkBox:hover { border-color: #a855f7; background: #faf5ff; }
+.checkBoxDone {
+  background: linear-gradient(135deg, #10b981, #059669);
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(16,185,129,0.3);
+}
+
+.checkEmoji { font-size: 1.125rem; flex-shrink: 0; }
+
+.checkText {
+  flex: 1;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #1e293b;
+}
+.checkTextDone {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+.priorityDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+

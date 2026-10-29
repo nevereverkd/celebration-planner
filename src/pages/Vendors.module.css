@@ -1,0 +1,135 @@
+/* Vendors.module.css */
+.page { max-width: 1100px; margin: 0 auto; animation: fadeIn 0.4s ease; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.statsRow {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.statChip {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: white;
+  border: 1px solid rgba(139,92,246,0.1);
+  border-radius: 14px;
+  padding: 0.875rem 1.25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  font-size: 1.25rem;
+  flex: 1;
+  min-width: 120px;
+}
+
+.filterRow {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.filterTab {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  border: 1.5px solid #e2e8f0;
+  background: white;
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.filterTab:hover { border-color: #c084fc; color: #7e22ce; }
+.filterTabActive {
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  border-color: transparent;
+  color: white;
+  box-shadow: 0 4px 12px rgba(139,92,246,0.3);
+}
+
+.filterCount {
+  background: rgba(255,255,255,0.3);
+  border-radius: 100px;
+  padding: 0 6px;
+  font-size: 0.75rem;
+}
+.filterTabActive .filterCount { background: rgba(255,255,255,0.3); }
+.filterTab:not(.filterTabActive) .filterCount { background: #f1f5f9; color: #64748b; }
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 1.25rem;
+  align-items: start;
+}
+@media (max-width: 900px) { .mainGrid { grid-template-columns: 1fr; } }
+
+.vendorGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.vendorCard {
+  background: white;
+  border-radius: 18px;
+  padding: 1.25rem;
+  border: 1px solid rgba(139,92,246,0.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.vendorCard:hover {
+  box-shadow: 0 8px 30px rgba(139,92,246,0.12);
+  transform: translateY(-2px);
+  border-color: rgba(139,92,246,0.15);
+}
+
+.vendorCardTop {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+}
+
+.vendorCatIcon {
+  font-size: 1.625rem;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(135deg, #faf5ff, #fce7f3);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vendorDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.vendorActions {
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 0.375rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.aiPanel {
+  background: linear-gradient(135deg, #faf5ff, #fce7f3);
+  border: 1.5px solid rgba(139,92,246,0.15);
+  border-radius: 20px;
+  padding: 1.5rem;
+  max-height: 600px;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(139,92,246,0.08);
+}
+
